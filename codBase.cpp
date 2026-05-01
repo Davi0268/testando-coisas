@@ -17,7 +17,7 @@ void menu(){
     cout << "\n";
 }
 
-void ordBubble(vector<int>& v){
+void BubbleSort(vector<int>& v){
         int t = v.size();
         for(int i = 0; i < t - 1; i++){
             for(int j = 0; j < t - i - 1; j++){
@@ -28,7 +28,7 @@ void ordBubble(vector<int>& v){
         }
     }
 
-void ordSelect(vector<int>& v){
+void SelectSort(vector<int>& v){
     int t = v.size();
     for(int i = 0; i < t - 1; i++){
         int min = i;
@@ -43,7 +43,7 @@ void ordSelect(vector<int>& v){
     }
 }
 
-void ordInsertion(vector<int>& v){
+void InserctionSort(vector<int>& v){
     int t = v.size();
     for(int i = 1; i < t; i++){
         int element = v[i];
@@ -79,7 +79,7 @@ int main(){
         goto aqui;
 
     case 2:
-    ordBubble(valores);
+    BubbleSort(valores);
 
     for(int i = 0; i < valores.size(); i++){
         cout << valores[i] << " ";
@@ -89,7 +89,7 @@ int main(){
         break;
     
     case 3:
-    ordSelect(valores);
+    SelectSort(valores);
 
     for(int i = 0; i < valores.size(); i++){
         cout << valores[i] << " ";
@@ -99,7 +99,7 @@ int main(){
         break;
     
     case 4:
-    ordInsertion(valores);
+    InserctionSort(valores);
 
      for(int i = 0; i < valores.size(); i++){
         cout << valores[i] << " ";
