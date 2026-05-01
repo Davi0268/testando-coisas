@@ -65,54 +65,57 @@ void aleatorio(vector<int>& v){
 }
 
 int main(){
+    while(true){
     srand(time(0));
     vector<int> valores;
     aleatorio(valores);
     int escolha;
-    aqui:
-    menu();
-    cin >> escolha;
-    switch (escolha){
-    case 1:
-    for(int i = 0; i < valores.size(); i++){
-        cout << valores[i] << " ";
-    }
-        cout << "\n";
-        system("pause");
-        goto aqui;
-
-    case 2:
-    BubbleSort(valores);
-
-    for(int i = 0; i < valores.size(); i++){
-        cout << valores[i] << " ";
-    }
-        cout << "\n";
-        system("pause");
-        break;
     
-    case 3:
-    SelectSort(valores);
+        menu();
+        cin >> escolha;
+        switch (escolha){
+        case 1:
+        for(int i = 0; i < valores.size(); i++){
+            cout << valores[i] << " ";
+        }
+            cout << "\n";
+            system("pause");
+            break;
 
-    for(int i = 0; i < valores.size(); i++){
-        cout << valores[i] << " ";
-    }
-        cout << "\n";
-        system("pause");
-        break;
-    
-    case 4:
-    InserctionSort(valores);
+        case 2:
+        BubbleSort(valores);
 
-     for(int i = 0; i < valores.size(); i++){
-        cout << valores[i] << " ";
-    }
-        cout << "\n";
-        system("pause");
-        break;
+        for(int i = 0; i < valores.size(); i++){
+            cout << valores[i] << " ";
+        }
+            cout << "\n";
+            system("pause");
+            break;
     
-    case 5:
-    break;
+        case 3:
+        SelectSort(valores);
+
+        for(int i = 0; i < valores.size(); i++){
+            cout << valores[i] << " ";
+        }
+            cout << "\n";
+            system("pause");
+            break;
+    
+        case 4:
+        InserctionSort(valores);
+
+        for(int i = 0; i < valores.size(); i++){
+            cout << valores[i] << " ";
+        }
+            cout << "\n";
+            system("pause");
+            break;
+        }
+        if(escolha == 5){
+            cout << "Adeus\n";
+        break;
+        }
     }
     return 0;
 }
