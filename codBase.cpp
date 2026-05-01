@@ -57,14 +57,17 @@ void InserctionSort(vector<int>& v){
     }
 }
 
+void aleatorio(vector<int>& v){
+    for(int i = 0; i < 49; i++){
+        int numPar = (rand() % 50) * 2;
+        v.push_back(numPar);
+    }
+}
+
 int main(){
-    vector<int> valores = {
-    92, 14, 46, 8, 62, 2, 88, 20, 54, 10, 
-    76, 32, 98, 40, 68, 24, 82, 4, 58, 36, 
-    100, 12, 50, 84, 18, 72, 30, 94, 44, 6, 
-    64, 22, 80, 38, 90, 52, 16, 74, 28, 86, 
-    42, 60, 26, 78, 34, 96, 48, 66, 56, 70
-};// Fiz isso com IA pq JESUS imagina escrever 50 números destintos par
+    srand(time(0));
+    vector<int> valores;
+    aleatorio(valores);
     int escolha;
     aqui:
     menu();
